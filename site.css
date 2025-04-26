@@ -1,16 +1,19 @@
-footer{
-    display: flex;
-    flex-wrap: wrap;
-
+.footer{
     margin: auto;
+    background-color: #dddddd;
+    text-align: center;
 }
 
-footer *{
+.footer *{
     text-decoration: none;
     font-size: 2em;
+    width: 100%;
+
+    display: inline-flex;
+    flex-wrap: nowrap;
 }
 
-footer a{
+.footer a{
     margin-right: 0.2em;
 }
 
@@ -57,7 +60,14 @@ div{
     padding-right: 7%;
 
     width: 100%;
+    margin: auto;
     display: block;
+}
+
+div.footer-links{
+    display: inline-flex;
+    width: 15em;
+    margin: auto;
 }
 
 .yellow{

@@ -54,6 +54,23 @@ body *{
     margin: auto;
 }
 
+.gigantic-essay-from-Rohith{
+    white-space: pre-line;
+}
+
+.gigantic-essay-from-Rohith h1, h2, h3, h4, h5{
+    margin-bottom: -1em;
+    padding-bottom: 0;
+}
+
+.gigantic-essay-from-Rohith ul{
+    white-space: normal;
+}
+
+.indented-list{
+    margin-left: 1em;
+}
+
 div{
     padding: 1em;
     padding-left: 7%;

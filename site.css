@@ -1,14 +1,33 @@
+footer{
+    display: flex;
+    flex-wrap: wrap;
+
+    margin: auto;
+}
+
+footer *{
+    text-decoration: none;
+    font-size: 2em;
+}
+
+footer a{
+    margin-right: 0.2em;
+}
+
 .nav-links{
     float: right;
-    font-size: 1.3em;
+    font-size: 1.1em;
 
-    display: inline-flex;
-    flex-wrap: wrap;
+    display: inline;
 }
 
 .nav-links a{
     color: green;
     padding-right: 1em;
+}
+
+.inner-div{
+    max-width: 111em;
 }
 
 nav{
@@ -18,7 +37,7 @@ nav{
 
 body{
     width: 100%;
-    max-width: 100%;
+    margin: auto;
     
     padding: 0;
     margin-left: 0;
@@ -29,12 +48,13 @@ body{
 
 body *{
     box-sizing: border-box;
+    margin: auto;
 }
 
 div{
     padding: 1em;
-    padding-left: 7em;
-    padding-right: 7em;
+    padding-left: 7%;
+    padding-right: 7%;
 
     width: 100%;
     display: block;

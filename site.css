@@ -1,0 +1,131 @@
+.footer{
+    margin: auto;
+    background-color: #dddddd;
+    text-align: center;
+}
+
+.footer *{
+    text-decoration: none;
+    font-size: 2em;
+    width: 100%;
+
+    display: inline-flex;
+    flex-wrap: nowrap;
+}
+
+.footer a{
+    margin-right: 0.2em;
+}
+
+.nav-links .selected-nav{
+    color: firebrick;
+}
+
+.nav-links{
+    float: right;
+    font-size: 1.1em;
+
+    display: inline;
+}
+
+.nav-links a{
+    color: green;
+    padding-right: 1em;
+}
+
+a{
+    text-decoration: none;
+}
+
+.inner-div{
+    max-width: 111em;
+}
+
+nav{
+    margin-right: 3em;
+    margin-top: 2em;
+}
+
+body{
+    width: 100%;
+    margin: auto;
+    
+    padding: 0;
+    margin-left: 0;
+    font-size: 1.1em;
+    font-family: sans-serif;
+    line-height: 1.6;
+}
+
+body *{
+    box-sizing: border-box;
+    margin: auto;
+}
+
+.gigantic-essay-from-Rohith{
+    white-space: pre-line;
+}
+
+.gigantic-essay-from-Rohith h1, h2, h3, h4, h5{
+    margin-bottom: -1em;
+    padding-bottom: 0;
+}
+
+.gigantic-essay-from-Rohith ul{
+    white-space: normal;
+}
+
+.indented-list{
+    margin-left: 1em;
+}
+
+div{
+    padding: 0.3em;
+    padding-left: 7%;
+    padding-right: 7%;
+
+    width: 100%;
+    margin: auto;
+    display: block;
+}
+
+div.footer-links{
+    display: inline-flex;
+    width: 15em;
+    margin: auto;
+}
+
+button{
+    background: none;
+    border: none;
+    cursor: pointer;
+
+    font-size: 1.2em;
+    color: olive;
+
+    padding-left: 0;
+}
+
+.yellow{
+    background-color: #F9FD85;
+}
+
+.light-pink{
+    background-color: #FFCFC0;
+}
+
+.light-orange{
+    background-color: #FFE09B;
+}
+
+.light-blue{
+    background-color: #B2FFFD;
+}
+
+.light-green{
+    background-color: #B0FFB8;
+}
+
+.blue{
+    background-color: #6EC1E4;
+}

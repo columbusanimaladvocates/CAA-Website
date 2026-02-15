@@ -112,6 +112,29 @@ button{
     padding-left: 0;
 }
 
+.read-more-content {
+    display: block;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.3s ease-out, opacity 0.4s ease-out;
+}
+
+.read-more-content.expanded {
+    max-height: 2000px;
+    opacity: 1;
+    transition: max-height 0.6s ease-in, opacity 0s ease-in;
+}
+
+.read-more-button .arrow {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.read-more-button.expanded .arrow {
+    transform: rotate(180deg);
+}
+
 .yellow{
     background-color: #F9FD85;
 }

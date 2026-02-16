@@ -44,6 +44,7 @@ a{
 nav{
     margin-right: 3em;
     margin-top: 2em;
+    overflow: auto;
 }
 
 body{
@@ -116,13 +117,11 @@ button{
     display: block;
     max-height: 0;
     overflow: hidden;
-    opacity: 0;
-    transition: max-height 0.3s ease-out, opacity 0.4s ease-out;
+    transition: max-height 0.3s ease-out, opacity 0s ease-out;
 }
 
 .read-more-content.expanded {
-    max-height: 2000px;
-    opacity: 1;
+    max-height: 100%;
     transition: max-height 0.6s ease-in, opacity 0s ease-in;
 }
 

@@ -82,6 +82,13 @@ body *{
     white-space: normal;
 }
 
+.white-box {
+    background-color: white;
+    border-radius: 8px;
+    padding: 1.5em;
+    margin-bottom: 1.5em;
+}
+
 .indented-list{
     margin-left: 1em;
 }

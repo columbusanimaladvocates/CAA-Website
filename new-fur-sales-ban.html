@@ -54,7 +54,7 @@
                 <div id="email-preview" style="display: none; background-color: white; border-radius: 8px; padding: 1.5em; margin-top: 1em;">
                     <h3 id="email-to" style="margin-bottom: 0.5em;"></h3>
                     <p><b>To:</b> <span id="email-address"></span></p>
-                    <p><b>Subject:</b> Please Support the Ordinance to Ban New Fur Sales in Columbus</p>
+                    <p><b>Subject:</b> <span id="email-subject"></span></p>
                     <br/>
                     <div id="email-body"></div>
                     <br/>
@@ -88,6 +88,7 @@
 
                 document.getElementById('email-to').textContent = 'Email to: ' + name;
                 document.getElementById('email-address').textContent = email;
+                document.getElementById('email-subject').textContent = subject;
                 document.getElementById('email-body').innerText = body;
                 document.getElementById('email-link').href = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
                 document.getElementById('email-preview').style.display = 'block';

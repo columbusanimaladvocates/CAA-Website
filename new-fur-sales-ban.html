@@ -32,23 +32,24 @@
         </nav>
         <div style="background-color: #FFD6D6; padding-bottom: 2em;">
             <div class="inner-div">
+                <div style="background-color: white; border-radius: 8px; padding: 1.5em; margin-bottom: 1.5em;">
                 <h1><b>New Fur Sales Ban</b></h1>
                 <p>Columbus City Council is considering an ordinance to ban the retail sale of new fur products. Click on your councilmember's name below to send them a pre-written email urging their support. It only takes a few clicks to make a difference for animals!</p>
                 <br/>
                 <h2>Contact Your Councilmember</h2>
                 <br/>
 
-                <div id="email-list">
-                    <p><a href="#" onclick="loadEmail('Shannon G. Hardin', 'jnclinger@columbus.gov', false); return false;">Shannon G. Hardin</a></p>
-                    <p><a href="#" onclick="loadEmail('Rob Dorans', 'abmcdonald@columbus.gov', false); return false;">Rob Dorans</a></p>
-                    <p><a href="#" onclick="loadEmail('Nicholas J. Bankston', 'jpdorval@columbus.gov', false); return false;">Nicholas J. Bankston</a></p>
-                    <p><a href="#" onclick="loadEmail('Lourdes Barroso de Padilla', 'jicaceres@columbus.gov', false); return false;">Lourdes Barroso de Padilla</a></p>
-                    <p><a href="#" onclick="loadEmail('Nancy Day-Achauer', 'jadilley@columbus.gov', false); return false;">Nancy Day-Achauer</a></p>
-                    <p><a href="#" onclick="loadEmail('Melissa Green', 'hegerken@columbus.gov', false); return false;">Melissa Green</a></p>
-                    <p><a href="#" onclick="loadEmail('Emmanuel V. Remy', 'pdmejia@columbus.gov', false); return false;">Emmanuel V. Remy</a></p>
-                    <p><a href="#" onclick="loadEmail('Tiara N. Ross', 'mdwiley@columbus.gov', false); return false;">Tiara N. Ross</a></p>
-                    <p><a href="#" onclick="loadEmail('Christopher L. Wyche', 'clgolterman@columbus.gov', true); return false;">Christopher L. Wyche</a></p>
-                </div>
+                <div id="email-list" style="display: flex; flex-wrap: wrap; gap: 0.8em;">
+    <button onclick="loadEmail('Shannon G. Hardin', 'jnclinger@columbus.gov', false)" style="background-color: #1a237e; color: white; padding: 0.6em 1.2em; border-radius: 6px; border: none; font-weight: bold; cursor: pointer;">Shannon G. Hardin</button>
+    <button onclick="loadEmail('Rob Dorans', 'abmcdonald@columbus.gov', false)" style="background-color: #1a237e; color: white; padding: 0.6em 1.2em; border-radius: 6px; border: none; font-weight: bold; cursor: pointer;">Rob Dorans</button>
+    <button onclick="loadEmail('Nicholas J. Bankston', 'jpdorval@columbus.gov', false)" style="background-color: #1a237e; color: white; padding: 0.6em 1.2em; border-radius: 6px; border: none; font-weight: bold; cursor: pointer;">Nicholas J. Bankston</button>
+    <button onclick="loadEmail('Lourdes Barroso de Padilla', 'jicaceres@columbus.gov', false, 'Barroso de Padilla')" style="background-color: #1a237e; color: white; padding: 0.6em 1.2em; border-radius: 6px; border: none; font-weight: bold; cursor: pointer;">Lourdes Barroso de Padilla</button>
+    <button onclick="loadEmail('Nancy Day-Achauer', 'jadilley@columbus.gov', false)" style="background-color: #1a237e; color: white; padding: 0.6em 1.2em; border-radius: 6px; border: none; font-weight: bold; cursor: pointer;">Nancy Day-Achauer</button>
+    <button onclick="loadEmail('Melissa Green', 'hegerken@columbus.gov', false)" style="background-color: #1a237e; color: white; padding: 0.6em 1.2em; border-radius: 6px; border: none; font-weight: bold; cursor: pointer;">Melissa Green</button>
+    <button onclick="loadEmail('Emmanuel V. Remy', 'pdmejia@columbus.gov', false)" style="background-color: #1a237e; color: white; padding: 0.6em 1.2em; border-radius: 6px; border: none; font-weight: bold; cursor: pointer;">Emmanuel V. Remy</button>
+    <button onclick="loadEmail('Tiara N. Ross', 'mdwiley@columbus.gov', false)" style="background-color: #1a237e; color: white; padding: 0.6em 1.2em; border-radius: 6px; border: none; font-weight: bold; cursor: pointer;">Tiara N. Ross</button>
+    <button onclick="loadEmail('Christopher L. Wyche', 'clgolterman@columbus.gov', true)" style="background-color: #1a237e; color: white; padding: 0.6em 1.2em; border-radius: 6px; border: none; font-weight: bold; cursor: pointer;">Christopher L. Wyche</button>
+</div>
 
                 <br/>
                 <div id="email-preview" style="display: none; background-color: white; border-radius: 8px; padding: 1.5em; margin-top: 1em;">
@@ -59,6 +60,7 @@
                     <div id="email-body"></div>
                     <br/>
                     <a id="email-link" href="#" style="background-color: #1a237e; color: white; padding: 0.6em 1.2em; border-radius: 6px; text-decoration: none; font-weight: bold;">Send This Email</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -76,14 +78,15 @@
         </div>
 
         <script>
-            function loadEmail(name, email, isWyche) {
+            function loadEmail(name, email, isWyche, overrideLastName) {
                 const subject = isWyche ? "Please Introduce the Ordinance to Ban New Fur Sales in Columbus" : "Please Support the Ordinance to Ban New Fur Sales in Columbus";
 
+                const lastName = overrideLastName || name.split(' ').pop();
                 let body;
                 if (isWyche) {
-                    body = `Dear Councilmember Wyche,\n\nI am writing as your constituent to thank your team for working on the ordinance to ban the retail sale of new fur products in Columbus. This legislation is an important step forward for animal welfare in our city.\n\nFur products are the result of immense animal suffering. Animals raised on fur farms spend their entire lives confined to small wire cages and are killed by gassing, electrocution, or neck-breaking. There is no humane way to produce fur at commercial scale.\n\nOver 100 cities and countries have already enacted fur bans, including California, Hawaii, and Midwestern cities like Ann Arbor, MI. Columbus has the opportunity to join this growing movement.\n\nI urge you to please introduce this ordinance as soon as possible.\n\nThank you for your service to our community.\n\nSincerely,\n[Your Name]`;
+                    body = `Dear Councilmember ${lastName},\n\nI am writing as your constituent to thank your team for working on the ordinance to ban the retail sale of new fur products in Columbus. This legislation is an important step forward for animal welfare in our city.\n\nFur products are the result of immense animal suffering. Animals raised on fur farms spend their entire lives confined to small wire cages and are killed by gassing, electrocution, or neck-breaking. There is no humane way to produce fur at commercial scale.\n\nOver 100 cities and countries have already enacted fur bans, including California, Hawaii, and Midwestern cities like Ann Arbor, MI. Columbus has the opportunity to join this growing movement.\n\nI urge you to please introduce this ordinance as soon as possible.\n\nThank you for your service to our community.\n\nSincerely,\n[Your Name]`;
                 } else {
-                    body = `Dear Councilmember ${name},\n\nI am writing as your constituent to urge you to support an ordinance banning the retail sale of new fur products being introduced to Columbus City Council.\n\nFur products are the result of immense animal suffering. Animals raised on fur farms spend their entire lives confined to small wire cages and are killed by gassing, electrocution, or neck-breaking. There is no humane way to produce fur at commercial scale.\n\nOver 100 cities and countries have already enacted fur bans, including California, Hawaii, and Midwestern cities like Ann Arbor, MI. Columbus has the opportunity to join this growing movement.\n\nI urge you to support this ordinance when it comes before council.\n\nThank you for your service to our community.\n\nSincerely,\n[Your Name]`;
+                    body = `Dear Councilmember ${lastName},\n\nI am writing as your constituent to urge you to support an ordinance banning the retail sale of new fur products being introduced to Columbus City Council.\n\nFur products are the result of immense animal suffering. Animals raised on fur farms spend their entire lives confined to small wire cages and are killed by gassing, electrocution, or neck-breaking. There is no humane way to produce fur at commercial scale.\n\nOver 100 cities and countries have already enacted fur bans, including California, Hawaii, and Midwestern cities like Ann Arbor, MI. Columbus has the opportunity to join this growing movement.\n\nI urge you to support this ordinance when it comes before council.\n\nThank you for your service to our community.\n\nSincerely,\n[Your Name]`;
                 }
 
                 document.getElementById('email-to').textContent = 'Email to: ' + name;
